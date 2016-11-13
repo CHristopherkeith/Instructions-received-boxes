@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Instructions received boxes</title>
+	<script type="text/javascript" src="Instructions_received_boxes.js"></script>
+	<link rel="stylesheet" type="text/css" href="Instructions_received_boxes.css">
+</head>
+<body>
+
+<div class="chessboard">
+</div>
+
+<div class="instruction">
+	<div id="colnum"><p>1</p></div>
+	<textarea id="instrinput"></textarea>
+</div>
+
+<div class="submission">
+	<input type="submit" id="instrsubmit" value="Submit">
+	<input type="submit" id="inrefresh" value="Refresh">
+	<input type="submit" id="indrawpic" value="Return">
+	<input type="submit" id="inbuildwall" value="Wall">
+</div>
+
+<div class="note">
+	<p>1.代码框可输入各种代码指令,按钮Submit,Refresh,Return,Wall代表执行,清除,回原点和造墙<br/>2.代码TRALEF,TRARIG,TRABOT,TRATOP+数字(不小于1)=向左,右,下,上平移数格的指令,例如TRALEF2代表向左偏移两格;代码MOVLEF,MOVRIG,MOVBOT,MOVTOP+数字的指令功能与TRA类似,但增加向相应方向旋转的功能;另外,键盘也可移动哦!<p class="detail">鼠标移至此查看详细</p><p class="showdetail">A：TRALEF；D：TRARIG；S：TRABOT；W：TRATOP；↑：MOVTOP；↓：MOVBOT；←：MOVLEF；→：MOVRIG</p><br/>3.代码BUILD=在目标面向的方向造墙,代码BRU+十六进制颜色名可刷墙,例如BRU#111111,按Rerun后(可选)可用以上提到的代码绘制出不同形状和颜色的墙,文件夹有示例代码<br/>4.按钮Wall可随机筑墙,用代码MOVETO+数字可以在迷宫中找到目标最短路径(A*算法,Heuristics启发函数),例如MOVETO99代表寻找路径并移动目标至第99个方格,执行后绿色代表路径，黄色代表试探区域</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,234 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	height: 100vh;
+	display: -webkit-flex;
+	justify-content:space-around;
+	align-items:center;
+	flex-direction:column;
+}
+.chessboard,.instruction,.submission{
+	width: 60vh;
+	height:60vh;
+	border:solid 1px #767575;
+}
+.instruction,.submission{
+	height:20vh;
+	display: -webkit-flex;
+	justify-content:space-around;	
+	border:transparent;
+}
+.submission{
+	height:3vh;
+	border:solid 1px;
+	font-family: Comic Sans Ms,simhei;
+	border:transparent;
+}
+.note{
+	height:8vh;
+	width: 100vh;
+	font-family: Comic Sans Ms,simhei;
+	font-size: 13px;
+	color: #7A7A7A;
+	word-break:break-word;
+}
+.note p{
+	display: inline;
+	cursor: pointer;
+}
+
+.detail{
+	color: #62B8C5;
+}
+.showdetail{
+	display: none;
+}
+.chessboard{
+	display: -webkit-flex;
+	flex-wrap:wrap;
+	align-content: flex-start;
+	
+}
+.chessblock{
+	width: 10%;
+	height: 10%;
+	box-sizing: border-box;
+	border-right:solid 1px #D3D3D3;
+	border-bottom:solid 1px #D3D3D3;
+	position: relative;
+}
+#littlegirl{
+	width: 100%;
+	height: 20%;
+	background-color: #7EB3E0;
+	vertical-align: bottom;
+	box-sizing: border-box;
+}
+#father{
+	width: 100%;
+	height: 100%;
+	background-color: #FB9F9F;
+}
+#instrinput{
+	height: 100%;
+	width: 95%;
+	box-sizing: border-box;
+	background-color: #000000;
+	color: #007A01;
+	border:transparent;
+	font-family:Comic Sans Ms,simhei;
+	font-size: 13px;
+	line-height: 20px;
+	padding-left: 5px;
+	resize: none;
+}
+#colnum{
+	height: 100%;
+	width: 5%;
+	box-sizing: border-box;
+	background-color: #CCCCCC;
+	border:transparent;
+	font-family:Comic Sans Ms,simhei;
+	color: #FFFFFF;
+	font-size: 13px;
+	line-height: 20px;
+	overflow: auto;
+}
+::-webkit-scrollbar{
+	width:0;
+}
+#colnum p{
+	text-align: center;
+	box-sizing: border-box;
+}
+.invalid{
+	background-color: #FA0D0D;
+	border-radius: 10px;
+}
+
+#instrsubmit,#inrefresh,#indrawpic,#inbuildwall{
+	height: 100%;
+	width: 15%;
+	font-family: Comic Sans Ms,simhei;
+	font-size: 13px;
+	line-height: 13px;
+	border:solid 1px #8D8D8D;
+	border-radius: 4px;
+	outline: none;
+	background-color: #FFFFFF;
+	color: #8C8989;
+}
+#instrsubmit:hover,#inrefresh:hover,#indrawpic:hover,#inbuildwall:hover{
+	cursor: pointer;
+}
+.buildwall{	
+	width: 100%;
+	height: 100%;
+	background-color: #D8D8D8;
+	opacity: 0.8;
+}
+.bruwall{	
+	width: 100%;
+	height: 100%;
+	opacity: 0.8;
+}
+.path{
+	width: 10%;
+	height: 10%;
+	box-sizing: border-box;
+	border-right:solid 1px #D3D3D3;
+	border-bottom:solid 1px #D3D3D3;
+	position: relative;
+	background-color: #ACDDB2;
+}
+.mark{
+	width: 10%;
+	height: 10%;
+	box-sizing: border-box;
+	border-right:solid 1px #D3D3D3;
+	border-bottom:solid 1px #D3D3D3;
+	position: relative;
+	background-color: #F9F295;
+}
+@-webkit-keyframes tralef{
+	from {right:0;}
+	to {right:100%;}	
+}
+@-webkit-keyframes trarig{
+	from {left:0;}
+	to {left:100%;}	
+}
+@-webkit-keyframes tratop{
+	from {bottom:0;}
+	to {bottom:100%;}	
+}
+@-webkit-keyframes trabot{
+	from {top:0;}
+	to {top:100%;}	
+}
+@-webkit-keyframes movlef{
+
+	from {right:0;}
+	to {right:100%;-webkit-transform:rotate(-90deg);}	
+}
+@-webkit-keyframes movrig{
+
+	from {left:0;}
+	to {left:100%;-webkit-transform:rotate(90deg);}	
+}
+@-webkit-keyframes movtop{
+
+	from {bottom:0;}
+	to {bottom:100%;-webkit-transform:rotate(0deg);}	
+}
+@-webkit-keyframes movbot{
+
+	from {top:0;}
+	to {top:100%;-webkit-transform:rotate(180deg);}	
+} 
+@-webkit-keyframes build{
+
+	from {height: 0}
+	to {height: 100%}	
+}
+.tralef{
+	-webkit-animation:tralef 0.5s;
+	position:absolute;
+}
+.trarig{
+	-webkit-animation:trarig 0.5s;
+	position:absolute;
+}
+.tratop{
+	-webkit-animation:tratop 0.5s;
+	position:absolute;
+}
+.trabot{
+	-webkit-animation:trabot 0.5s;
+	position:absolute;
+}
+.movlef{
+	-webkit-animation:movlef 0.5s;
+	position:absolute;
+}
+.movrig{
+	-webkit-animation:movrig 0.5s;
+	position:absolute;
+}
+.movtop{
+	-webkit-animation:movtop 0.5s;
+	position:absolute;
+}
+.movbot{
+	-webkit-animation:movbot 0.5s;
+	position:absolute;
+}
+.build{
+	-webkit-animation:build 0.5s;
+	-webkit-animation-fill-mode:forwards;
+	background-color: #D8D8D8;
+	opacity: 0.8;
+	width: 100%;
+}
